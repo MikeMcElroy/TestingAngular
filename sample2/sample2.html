@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html data-ng-app="CodeExample2">
+	<head>
+		<title>Testing Example 1</title>
+		<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.5/angular.min.js"></script>
+	</head>
+	<body data-ng-controller="PeopleController">
+		<div data-ng-show="showNoPerson" class="error">
+			No Person Found!  Please Try Again!
+		</div>
+		<div>
+			<input data-ng-model="personId" type="number" />
+			<button data-ng-click="getPerson(personId)">Find them!</button>
+		</div>
+		<hr />
+		<div data-ng-hide="showNoPerson" style="border-bottom:dashed 2px blue; margin-bottom:3px;">
+			<div data-person="person"></div>
+		</div>
+		<div>
+			<button data-ng-click="getConnectedPeople(personId)">Get connected people</button>
+		</div>
+		<div data-ng-show="noConnectedPeople">
+			No connected people, sorry!
+		</div>
+		<div style="border-bottom:dashed 2px blue;">
+			<div data-ng-repeat="person in connectedPeople" data-person="person"></div>
+		</div>
+		<script type="text/javascript" src="/sample1/ugly/sample1.js"></script>
+		<script type="text/javascript" src="/sample2/ugly/sample2.js"></script>
+	</body>
+</html>
