@@ -22,7 +22,7 @@
 		<div>
 			<button data-ng-click="getConnectedPeople(personId)">Get connected people</button>
 		</div>
-		<div ng-show="noConnectedPeople">
+		<div data-ng-show="noConnectedPeople">
 			No connected people, sorry!
 		</div>
 		<div data-ng-repeat="person in connectedPeople">

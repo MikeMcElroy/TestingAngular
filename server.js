@@ -1,10 +1,10 @@
 var exp = require('express'),
 	app = exp(),
 	data = {
-		"123": {id: "123", name: "Paul Paulenson"},
-		"321": {id: "321", name: "Robert Robertson"},
-		"432": {id: "432", name: "Joseph Josephson"},
-		"234": {id: "234", name: "Sarah Sarandaughter"}
+		"123": {id: "123", name: "Paul Paulenson", address: "123 Fake Street"},
+		"321": {id: "321", name: "Robert Robertson", address: "321 Notreal Ave"},
+		"432": {id: "432", name: "Joseph Josephson", address: "432 Inaccurate Dr", phone: "867-5309"},
+		"234": {id: "234", name: "Sarah Sarandaughter", address: "234 False Blvd"}
 	},
 	connectedData = {
 		"123": ["321"],
@@ -20,19 +20,6 @@ var exp = require('express'),
 	],
 	i = 0,
 	l = staticFiles.length;
-
-// app.get("/url/people/123", function(req, res) {
-// 	res.setHeader("Content-Type", "text/plain");
-// 	res.send(data[123]);
-// });
-// app.get("/url/people/321", function(req, res) {
-// 	res.setHeader("Content-Type", "text/plain");
-// 	res.send(data[321]);
-// });
-// app.get("/url/people/432", function(req, res) {
-// 	res.setHeader("Content-Type", "text/plain");
-// 	res.send(data[432]);
-// });
 
 app.get("/url/people/:id", function(req, res) {
 	res.setHeader("Content-Type", "text/plain");
