@@ -13,9 +13,23 @@
 			<button data-ng-click="getPerson(personId)">Find them!</button>
 		</div>
 		<div>
+			<hr />
 			<div data-ng-repeat="(key,value) in person">
 				<label>{{key}}:</label>
-				<span>{{val}}</span>
+				<span>{{value}}</span>
+			</div>
+		</div>
+		<div>
+			<button data-ng-click="getConnectedPeople(personId)">Get connected people</button>
+		</div>
+		<div ng-show="noConnectedPeople">
+			No connected people, sorry!
+		</div>
+		<div data-ng-repeat="person in connectedPeople">
+			<hr />
+			<div data-ng-repeat="(key,value) in person">
+				<label>{{key}}:</label>
+				<span>{{value}}</span>
 			</div>
 		</div>
 		<script type="text/javascript" src="sample1.js"></script>
