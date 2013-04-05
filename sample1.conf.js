@@ -10,7 +10,9 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
-  'sample1/good/*.js',
+  'lib/angular.js',
+  'lib/angularmocks.js',
+  'sample1/ugly/*.js',
   'sample1/tests/*.js'
 ];
 
@@ -44,7 +46,7 @@ logLevel = LOG_INFO;
 
 
 // enable / disable watching file and executing tests whenever any file changes
-autoWatch = false;
+autoWatch = true;
 
 
 // Start these browsers, currently available:
